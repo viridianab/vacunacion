@@ -662,12 +662,6 @@ p, li, label {
 
 
 /* --# Responsivo #-- */
-@media (max-width:1441px) {
-}
-@media (max-width:1367px) {
-}
-@media (min-width:1024px) {
-}
 @media (max-width:1023px) {
     /* --# Seccion: Navbar #-- */
     .navbar {
@@ -760,6 +754,9 @@ p, li, label {
         display: block;
     }
     /* --# Seccion: Why #-- */
+    .why {
+        z-index: 1;
+    }
     .why .container {
         flex-direction: column;
         gap: 25px 0;
@@ -767,7 +764,10 @@ p, li, label {
     .why .column:not(:first-child) {
         width: 100%;
     }
-    /* --# Seccion: preparations #-- */
+    .why::before {
+        z-index: -1;
+    }
+    /* --# Seccion: Preparations #-- */
     .preparations {
         display: flex;
         flex-direction: column-reverse;
@@ -790,12 +790,16 @@ p, li, label {
     .preparations li:hover .content {
         height: 8rem;
     }
-    /* --# Seccion: Header #-- */
+    /* --# Seccion: Emergency #-- */
     .emergency {
         margin-bottom: 0;
+        z-index: 1;
     }
     .emergency .container {
         flex-direction: column;
+    }
+    .emergency::before {
+        z-index: -1;
     }
     .emergency .column {
         width: 100%;
@@ -804,14 +808,13 @@ p, li, label {
         position: relative;
         width: 100%;
     }
+    .emergency .head .bg-icon {
+        margin-right: .35rem;
+    }
+    .emergency .head .bg-icon i {
+        font-size: 1rem;
+    }
+    .emergency .grid .subtitle {
+        font-size: 1rem;
+    }
 }
-@media (max-width:991px) {
-}
-@media (min-width: 769px) {
-    
-}
-@media (max-width: 768px) {
-}
-@media (max-width: 575px) {
-}
-@media (max-width: 376px) {}
